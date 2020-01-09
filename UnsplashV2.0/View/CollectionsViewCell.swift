@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import UIKit
+
+class CollectionsViewCell: UICollectionViewCell {
+     var collectionsImageView: UIImageView!
+     var collectionTitleLabel: UILabel!
+}

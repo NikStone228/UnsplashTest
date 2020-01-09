@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct SearchResults {
+  let searchTerm: String?
+  let searchResults: Search?
+  let collections: [Collection?]
+}
+
+struct CollectionIdSearchResult {
+    let photos: [Photo]
+}

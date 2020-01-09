@@ -24,9 +24,9 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Поиск"
+        
+        title = "Search"
         searchBar.delegate = self
-    
         view.addSubview(searchBar)
         makeConstraints()
     }
@@ -51,7 +51,12 @@ extension SearchViewController: UISearchBarDelegate {
             case .success(let value):
                 let photos = value.results
                 print(photos)
+                let vc = ViewControllers.resultViewController.instance(fromStoryboard: Storyboard.main.instance) as! ResultViewController
+                vc.photos = photos
+                vc.title = text
+                strongSelf.show(vc, sender: nil)
             }
         }
     }
 }
+

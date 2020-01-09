@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+class CollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var collectionsImageView: UIImageView!
+    @IBOutlet weak var collectionTitleLabel: UILabel!
+}

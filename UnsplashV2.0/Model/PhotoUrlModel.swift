@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+public struct PhotoURL: Codable {
+    
+    public let raw: URL
+    public let full: URL
+    public let regular: URL
+    public let small: URL
+    public let thumb: URL
+    public let custom: URL?
+}

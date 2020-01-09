@@ -14,9 +14,9 @@ struct CustomError: Error, Decodable {
     var errors: [String?]
 }
 
-final public class NetService {
+final public class NetworkService {
     
-    public static let shared = NetService()
+    public static let shared = NetworkService()
     
     func parsingStringFromHTML(
         url: URL?,
